@@ -9,16 +9,16 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 export default defineConfig([
   globalIgnores(['dist']),
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
-      reactX.config['recommended-typescript'],
-      reactDom.config.recommended,
-
-tseslint.config.strictTypeChecked,
-testlint.config.stylisticTypeChecked,
+      reactX.configs['recommended-typescript'],
+      reactDom.configs.recommended,
+tseslint.configs.recommendedTypeChecked,
+tseslint.configs.strictTypeChecked,
+testlint.configs.stylisticTypeChecked,
 
     ],
     languageOptions: {
