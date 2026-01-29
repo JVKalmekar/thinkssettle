@@ -12,16 +12,10 @@ export default defineConfig({
     plugins: [
     reactRouter(),
     react({
-      babel({
-        filter: /\.[jt]sx?$/,
-        babelConfig: {
-          presets: ["@babel/preset-typescript"],
-        plugins: [
-        ["babel-plugin-react-compiler", ReactCompilerConfig],
-       ],
-      
-      },
-    }),
+      babel : {
+      plugins: ["babel-plugin-react-compiler", ReactCompilerConfig],
+        
+     },
   }),
 ],
 });
